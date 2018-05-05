@@ -1,0 +1,37 @@
+{% extends 'all-temps/base.html' %}
+{% block content  %}
+{{block.super}}
+<div class="container">
+<div class="row">
+        {% for photos in photo  %}
+    <div class="col-sm-6 col-md-3 box  wid">
+            <div class="card card-cascade wider reverse my-4">
+
+
+                    <div class="view overlay">
+
+                        <img  src="{{ photos.image.url }}" class="img-fluid image">
+                           <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="box-content">
+                    <div class="card-body text-center middle">
+                    <h4 class="card-title text "><strong><h2>{{ photos.image_name }}</h2></strong></h4>
+
+                        <a href="{% url 'details' photo.id  %}" class="btn btn-primary see ">See More</a>
+                    </div>
+                </div>
+
+
+                </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+</div>
+
+
+{% endblock %}
