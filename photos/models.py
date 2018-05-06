@@ -19,3 +19,13 @@ class Category(models.Model):
 
     def save_category(self):
         self.save()
+
+class Gallery(models.Model):
+    image = models.ImageField(upload_to='gallery/',null=True, blank=True)
+    image_name =models.CharField(max_length=25)
+    description = models.TextField(max_length=250)
+    loaction = models.ForeignKey(Location)
+    category = models.ForeignKey(Category)
+
+    def __str__(self):
+        return self.image_name
