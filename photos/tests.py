@@ -18,7 +18,7 @@ class GalleryTestClass(TestCase):
         self.test_location = Location(location="Migori")
         self.test_location.save()
 
-        self.test_category = Category(category="")
+        self.test_category = Category(category="cars")
         self.test_category.save()
 
 
