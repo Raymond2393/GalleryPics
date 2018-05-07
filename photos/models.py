@@ -11,7 +11,8 @@ class Location(models.Model):
 
     def save_location(self):
         self.save()
-        
+
+
 class Category(models.Model):
     category = models.CharField(max_length=30)
 
@@ -47,6 +48,7 @@ class Gallery(models.Model):
         pass
     def search_image(category):
         pass
+        
 
     @classmethod
     def search_by_category(cls, search_term):
