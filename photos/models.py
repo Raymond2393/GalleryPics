@@ -18,7 +18,6 @@ class Category(models.Model):
 
     def __str__(self):
         return self.category
-
     def save_category(self):
         self.save()
 
@@ -48,7 +47,7 @@ class Gallery(models.Model):
         pass
     def search_image(category):
         pass
-        
+
 
     @classmethod
     def search_by_category(cls, search_term):
