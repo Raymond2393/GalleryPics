@@ -6,11 +6,8 @@
         {% for photos in photo  %}
     <div class="col-sm-6 col-md-3 box ">
             <div class="card card-cascade wider reverse my-4">
-
-
                     <div class="view overlay">
-
-                        <img  src="{{ photos.image.url }}" class="img-fluid image">
+                        <img  src="{{ photos.image.url }}" class="img-fluid image" class="w3-hover-opacity" style="width:300px">
                            <a href="#!">
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -22,10 +19,7 @@
                         <a href="{% url 'description' photos.id  %}" class="btn btn-primary see ">See More</a>
                     </div>
                 </div>
-
-
                 </div>
-
     </div>
     {% endfor %}
 </div>

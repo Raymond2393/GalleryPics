@@ -4,7 +4,7 @@ from .models import Gallery,Location,Category
 # Create your views here.
 
 def index(request):
-    photo=Gallery.objects.all()
+    photo = Gallery.objects.all()
     return render(request,'index.html',{"photo": photo })
 
 def search_results(request):

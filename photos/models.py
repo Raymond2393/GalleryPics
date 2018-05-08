@@ -32,9 +32,9 @@ class Gallery(models.Model):
         return self.image_name
 
     @classmethod
-    def my_images(Cls):
+    def my_images(cls):
         images = cls.objects.all()
-        return Images
+        return images
     def save_images(self):
         self.remove()
     def delete_images(self):

@@ -10,6 +10,5 @@ urlpatterns=[
     url(r'^category/', views.category, name='classfied'),
 
 ]
-
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
